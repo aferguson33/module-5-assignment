@@ -103,6 +103,7 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
        var chosenCategoryShortName = function chooseRandomCategory(categories){
          document.querySelector("#main-content").innerHtml = categories;
+         return categories;
        }
 
 
@@ -117,7 +118,7 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      //var homeHtmlToInsertIntoMainPage = ....
+      //var homeHtmlToInsertIntoMainPage =  
 
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
