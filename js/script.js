@@ -118,11 +118,11 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-       var homeHtmlToInsertIntoMainPage = function (chosenCategoryShortName, randomCategoryShortName, propValue) {
-  var propToReplace = "{{" + randomCategoryShortName + "}}";
-  chosenCategoryShortName = chosenCategoryShortName;
-    .replace(new RegExp(propToReplace, "L"), propValue);
-  return chosenCategoryShortName;
+      // var homeHtmlToInsertIntoMainPage = function (chosenCategoryShortName, randomCategoryShortName, propValue) {
+  //var propToReplace = "{{" + randomCategoryShortName + "}}";
+ // chosenCategoryShortName = chosenCategoryShortName;
+ //   .replace(new RegExp(propToReplace, "L"), propValue);
+//  return chosenCategoryShortName;
 };
 
 
@@ -130,8 +130,8 @@ function buildAndShowHomeHTML (categories) {
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
      var insertHtml = function (selector, html) {
-  var targetElem = document.querySelector(#main-content);
-  targetElem.innerHTML = html;
+  //var targetElem = document.querySelector(#main-content);
+  //targetElem.innerHTML = html;
        
 };
 
