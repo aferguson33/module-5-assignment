@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  homeHtmlUrl, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  categories, // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -101,10 +101,10 @@ function buildAndShowHomeHTML (categories) {
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
-      // var chosenCategoryShortName = function chooseRandomCategory (categories){
-       //  var randomArrayIndex = Math.floor(Math.random() * categories.length);
-        // return categories[randomArrayIndex];
-       //}
+       var chosenCategoryShortName = function chooseRandomCategory (categories){
+         var randomArrayIndex = Math.floor(Math.random() * categories.length);
+         return categories[randomArrayIndex];
+       }
 
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
@@ -118,11 +118,11 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      // var homeHtmlToInsertIntoMainPage = function (chosenCategoryShortName, randomCategoryShortName, propValue) {
-  //var propToReplace = "{{" + randomCategoryShortName + "}}";
- // chosenCategoryShortName = chosenCategoryShortName;
- //   .replace(new RegExp(propToReplace, "L"), propValue);
-//  return chosenCategoryShortName;
+       var homeHtmlToInsertIntoMainPage = function (chosenCategoryShortName, randomCategoryShortName, propValue) {
+  var propToReplace = "{{" + randomCategoryShortName + "}}";
+  chosenCategoryShortName = chosenCategoryShortName;
+    .replace(new RegExp(propToReplace, "L"), propValue);
+  return chosenCategoryShortName;
 };
 
 
@@ -130,8 +130,8 @@ function buildAndShowHomeHTML (categories) {
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
      var insertHtml = function (selector, html) {
-  //var targetElem = document.querySelector(#main-content);
-  //targetElem.innerHTML = html;
+  var targetElem = document.querySelector(#main-content);
+  targetElem.innerHTML = html;
        
 };
 
